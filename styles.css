@@ -238,3 +238,39 @@ article p,.menu-card p,.story p,.contact-grid p{
   .feature-grid,.menu-grid,.contact-grid{grid-template-columns:1fr}
   h1{letter-spacing:-1.5px}
 }
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.gallery-card{
+    background:white;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.gallery-card:hover{
+    transform:translateY(-8px);
+}
+
+.gallery-card h3{
+    margin:20px 0 10px;
+    color:#174f24;
+}
+
+.gallery-card p{
+    color:#666;
+}
+
+.section-intro{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+}
