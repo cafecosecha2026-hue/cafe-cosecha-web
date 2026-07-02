@@ -19,7 +19,19 @@ body{
   color:var(--brown);
 }
 a{text-decoration:none;color:inherit}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:160px;
+  background:linear-gradient(to bottom, transparent, var(--cream));
+  pointer-events:none;
+}
 
+.hero{
+  position:relative;
+  overflow:hidden;
+}
 .hero{
   min-height:100vh;
   padding:24px;
@@ -126,6 +138,7 @@ h1{
   justify-content:flex-end;
   position:relative;
   overflow:hidden;
+  backdrop-filter: blur(10px);
 }
 .hero-card:before{
   content:"";
