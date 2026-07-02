@@ -274,3 +274,38 @@ article p,.menu-card p,.story p,.contact-grid p{
     color:#666;
     margin-bottom:40px;
 }
+footer{
+
+    background:#173f2a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    margin-top:90px;
+
+}
+
+footer h3{
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+}
+
+footer p{
+
+    color:#f2e6d7;
+
+    margin-bottom:25px;
+
+}
+
+footer small{
+
+    color:#c8d7ca;
+
+}
