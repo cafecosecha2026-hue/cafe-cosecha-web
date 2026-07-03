@@ -35,7 +35,7 @@ a{
 
 .hero{
   min-height:100vh;
-  padding:24px;
+  padding:130px 24px 24px;
   position:relative;
   overflow:hidden;
   background:
@@ -56,18 +56,23 @@ a{
 }
 
 .navbar{
-  position:sticky;
-  top:0;
-  z-index:9999;
+  position:fixed;
+  top:16px;
+  left:50%;
+  transform:translateX(-50%);
+  width:calc(100% - 48px);
   max-width:1180px;
-  margin:0 auto 40px;
+  z-index:9999;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:20px;
+
   padding:18px 22px;
   border:1px solid rgba(255,255,255,.75);
-  border-radius:0 0 28px 28px;
+  border-radius:999px;
+
   background:rgba(255,255,255,.96);
   backdrop-filter:blur(18px);
   box-shadow:0 15px 45px rgba(43,23,15,.12);
