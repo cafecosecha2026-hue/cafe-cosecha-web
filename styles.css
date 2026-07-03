@@ -235,7 +235,7 @@ h1{
 }
 
 .menu-grid{
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:repeat(4,1fr);
 }
 
 .gallery{
@@ -526,7 +526,7 @@ footer small{
   margin-bottom:18px;
 }
 .menu-grid{
-  grid-template-columns:repeat(5,1fr);
+grid-template-columns:repeat(4,1fr) !important;
 }
 
 .menu-card{
@@ -683,4 +683,69 @@ footer small{
   .price-grid{
     grid-template-columns:1fr;
   }
+}
+.section h1{
+    text-align:center;
+    font-size:56px;
+    color:var(--brown);
+    margin:20px 0 40px;
+}
+
+.section h2{
+    text-align:center;
+}
+/* ===== PÁGINAS DE CARTAS ===== */
+
+.page-header{
+    text-align:center;
+    margin:20px auto 50px;
+}
+
+.page-header h1{
+    font-size:58px;
+    color:var(--brown);
+    margin:20px 0;
+}
+
+.page-header img{
+    width:100%;
+    max-width:850px;
+    border-radius:30px;
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+}
+
+.back-button{
+    margin-bottom:30px;
+}
+
+.price-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+    gap:28px;
+    margin-top:40px;
+}
+
+.price-card{
+    background:#fff;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    border:1px solid #ead8bd;
+}
+
+.price-card h2{
+    color:var(--green);
+    margin-bottom:25px;
+}
+
+.price-card p{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px dashed #e7d6bd;
+}
+
+.price-card span{
+    font-weight:bold;
+    color:var(--brown);
 }
