@@ -57,25 +57,25 @@ a{
 
 .navbar{
   position:fixed;
-  top:16px;
+  top:12px;
   left:50%;
   transform:translateX(-50%);
-  width:calc(100% - 48px);
-  max-width:1180px;
+  width:calc(100% - 64px);
+  max-width:1120px;
   z-index:9999;
 
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:20px;
+  gap:18px;
 
-  padding:18px 22px;
+  padding:13px 22px;
   border:1px solid rgba(255,255,255,.75);
   border-radius:999px;
 
-  background:rgba(255,255,255,.96);
+  background:rgba(255,255,255,.94);
   backdrop-filter:blur(18px);
-  box-shadow:0 15px 45px rgba(43,23,15,.12);
+  box-shadow:0 10px 30px rgba(43,23,15,.10);
 }
 
 .brand{
