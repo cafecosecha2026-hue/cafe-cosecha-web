@@ -10,9 +10,7 @@
   --shadow:0 24px 70px rgba(43,23,15,.14);
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 html{
   scroll-behavior:smooth;
@@ -31,13 +29,15 @@ a{
   text-decoration:none;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 
 .hero{
   min-height:100vh;
   padding:130px 24px 24px;
   position:relative;
   overflow:hidden;
+  display:flex;
+  align-items:center;
   background:
     radial-gradient(circle at 12% 10%, rgba(232,117,26,.20), transparent 32%),
     radial-gradient(circle at 90% 20%, rgba(47,107,67,.18), transparent 30%),
@@ -55,6 +55,8 @@ a{
   pointer-events:none;
 }
 
+/* ===== BARRA SUPERIOR ===== */
+
 .navbar{
   position:fixed;
   top:12px;
@@ -63,16 +65,13 @@ a{
   width:calc(100% - 64px);
   max-width:1120px;
   z-index:9999;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:18px;
-
   padding:13px 22px;
   border:1px solid rgba(255,255,255,.75);
   border-radius:999px;
-
   background:rgba(255,255,255,.94);
   backdrop-filter:blur(18px);
   box-shadow:0 10px 30px rgba(43,23,15,.10);
@@ -99,18 +98,22 @@ a{
   color:var(--orange);
 }
 
+/* ===== HERO CONTENT ===== */
+
 .hero-grid{
-    max-width:1250px;
-    margin:70px auto 0;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-
-    align-items:center;
+  max-width:1250px;
+  margin:70px auto 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+  position:relative;
+  z-index:2;
 }
 
-.hero-text{
+.hero-text,
+.hero-image,
+.section{
   animation:fadeUp .8s ease both;
 }
 
@@ -137,19 +140,14 @@ h1{
 }
 
 .subtitle{
-
-    font-size:24px;
-
-    line-height:1.75;
-
-    max-width:620px;
-
-    color:#6d5b4d;
-
+  font-size:24px;
+  line-height:1.75;
+  max-width:620px;
+  color:#6d5b4d;
 }
 
 .hero-buttons{
-  margin-top:34px;
+  margin-top:45px;
   display:flex;
   gap:14px;
   flex-wrap:wrap;
@@ -162,6 +160,11 @@ h1{
   font-weight:900;
   box-shadow:0 16px 38px rgba(43,23,15,.16);
   transition:.25s ease;
+}
+
+.hero-buttons .btn{
+  font-size:18px;
+  padding:18px 34px;
 }
 
 .btn:hover{
@@ -180,37 +183,30 @@ h1{
 
 .hero-image{
   display:flex;
-  justify-content:center;
+  justify-content:flex-end;
   align-items:center;
-  animation:fadeUp .8s ease both;
 }
 
 .hero-image img{
-    width:100%;
-    max-width:650px;
-
-    border-radius:36px;
-
-    display:block;
-
-    box-shadow:
-        0 45px 80px rgba(0,0,0,.18);
-
-    transition:.45s;
+  width:100%;
+  max-width:650px;
+  border-radius:36px;
+  display:block;
+  box-shadow:0 45px 80px rgba(0,0,0,.18);
+  transition:.45s;
 }
 
 .hero-image img:hover{
-  transform:translateY(-10px) scale(1.02);
+  transform:translateY(-8px) rotate(.5deg) scale(1.03);
 }
 
-/* SECCIONES */
+/* ===== SECCIONES ===== */
 
 .section{
   max-width:1180px;
   margin:auto;
   padding:90px 24px;
   scroll-margin-top:120px;
-  animation:fadeUp .8s ease both;
 }
 
 .section h1{
@@ -234,7 +230,7 @@ h1{
   margin:0 auto;
 }
 
-/* GRIDS */
+/* ===== GRIDS ===== */
 
 .feature-grid,
 .menu-grid,
@@ -257,17 +253,13 @@ h1{
   grid-template-columns:repeat(4,1fr);
 }
 
-.contact-grid{
-  grid-template-columns:repeat(3,1fr);
-}
-
 .price-grid{
   grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
   gap:28px;
   margin-top:40px;
 }
 
-/* TARJETAS */
+/* ===== TARJETAS GENERALES ===== */
 
 article,
 .menu-card,
@@ -282,7 +274,6 @@ article,
 }
 
 article,
-.contact-grid div,
 .price-card{
   padding:30px;
 }
@@ -294,32 +285,54 @@ article:hover,
   box-shadow:var(--shadow);
 }
 
-/* ESPECIALIDADES */
+/* ===== ESPECIALIDADES ===== */
 
-.feature-grid article{
-  padding:24px;
+#especialidades{
+  position:relative;
+}
+
+#especialidades .feature-grid{
+  margin-top:20px;
+}
+
+#especialidades article{
+  padding:0;
+  overflow:hidden;
+  border-radius:34px;
+  background:white;
   display:flex;
   flex-direction:column;
 }
 
-.feature-grid article img{
+#especialidades article img{
   width:100%;
-  height:230px;
+  height:280px;
   object-fit:cover;
-  border-radius:22px;
-  margin-bottom:20px;
+  border-radius:0;
+  margin:0;
   transition:.35s;
 }
 
-.feature-grid article:hover img{
+#especialidades article:hover img{
   transform:scale(1.05);
 }
 
-.feature-grid article h3{
-  margin-top:0;
+#especialidades article h3{
+  padding:26px 26px 0;
+  font-size:26px;
+  color:var(--green);
+  margin:0 0 10px;
 }
 
-/* CARTA PRINCIPAL */
+#especialidades article p{
+  padding:0 26px 30px;
+  margin:0;
+  font-size:17px;
+  line-height:1.55;
+  color:var(--muted);
+}
+
+/* ===== CARTA PRINCIPAL ===== */
 
 .menu-section{
   background:#fffaf0;
@@ -327,40 +340,50 @@ article:hover,
   box-shadow:inset 0 0 0 1px var(--line);
 }
 
-.menu-card{
-  padding:18px;
+#carta .menu-card{
+  background:#fff;
+  border-radius:34px;
   overflow:hidden;
+  padding:0;
   display:block;
+  transition:.35s;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
-.menu-card img{
+#carta .menu-card img{
   width:100%;
-  height:150px;
+  height:220px;
   object-fit:cover;
-  border-radius:18px;
-  margin-bottom:14px;
   display:block;
-  transition:.4s;
+  border-radius:0;
+  transition:.45s;
 }
 
-.menu-card:hover img{
-  transform:scale(1.05);
+#carta .menu-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
 }
 
-.menu-card h3{
-  font-size:20px;
-  color:var(--green);
-  margin:12px 0 8px;
+#carta .menu-card:hover img{
+  transform:scale(1.08);
 }
 
-.menu-card p{
-  font-size:14px;
-  color:var(--muted);
-  line-height:1.45;
+#carta .menu-card h3{
+  font-size:28px;
+  padding:22px 24px 8px;
   margin:0;
+  color:var(--green);
 }
 
-/* HISTORIA */
+#carta .menu-card p{
+  padding:0 24px 28px;
+  margin:0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* ===== HISTORIA ===== */
 
 .story{
   background:var(--green);
@@ -387,7 +410,7 @@ article:hover,
   line-height:1.6;
 }
 
-/* GALERÍA */
+/* ===== GALERÍA ===== */
 
 .gallery-card{
   padding:20px;
@@ -419,7 +442,7 @@ article:hover,
   font-size:16px;
 }
 
-/* CONTACTO */
+/* ===== CONTACTO PREMIUM ===== */
 
 .contact{
   text-align:center;
@@ -429,23 +452,55 @@ article:hover,
   margin-top:16px;
 }
 
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,330px);
+  justify-content:center;
+  gap:32px;
+  margin-top:45px;
+}
+
 .contact-grid div{
-  text-align:left;
+  min-height:300px;
+  padding:38px 32px;
+  text-align:center;
+  border-radius:34px;
 }
 
 .contact-grid h3{
-  font-size:22px;
+  font-size:26px;
   color:var(--green);
   margin:18px 0 10px;
+  text-align:center;
 }
 
 .contact-grid p{
   color:var(--muted);
   line-height:1.6;
-  font-size:16px;
+  font-size:17px;
+  text-align:center;
 }
 
-/* PÁGINAS DE CARTAS */
+.contact-grid .btn{
+  display:inline-block;
+  margin-top:22px;
+  color:white !important;
+  text-decoration:none !important;
+}
+
+.contact-grid a{
+  color:var(--green);
+  font-weight:800;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.contact-grid a:hover{
+  color:var(--orange);
+  text-decoration:underline;
+}
+
+/* ===== PÁGINAS DE CARTAS ===== */
 
 .page-header{
   text-align:center;
@@ -499,7 +554,7 @@ article:hover,
   white-space:nowrap;
 }
 
-/* WHATSAPP */
+/* ===== WHATSAPP ===== */
 
 .whatsapp{
   position:fixed;
@@ -514,7 +569,7 @@ article:hover,
   z-index:20;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 footer{
   background:var(--green);
@@ -538,7 +593,7 @@ footer small{
   color:#c8d7ca;
 }
 
-/* ANIMACIONES */
+/* ===== ANIMACIONES ===== */
 
 @keyframes fadeUp{
   from{
@@ -552,7 +607,7 @@ footer small{
   }
 }
 
-/* MÓVIL */
+/* ===== RESPONSIVE ===== */
 
 @media(max-width:1000px){
   .hero-grid{
@@ -568,9 +623,14 @@ footer small{
     grid-template-columns:1fr;
   }
 
+  .hero-image{
+    justify-content:center;
+  }
+
   .navbar{
-    border-radius:0 0 26px 26px;
+    width:calc(100% - 32px);
     flex-direction:column;
+    border-radius:26px;
   }
 
   .nav-links{
@@ -580,136 +640,33 @@ footer small{
 
 @media(max-width:700px){
   .hero{
-    padding:16px;
+    padding:120px 16px 24px;
   }
 
   h1{
-    font-size:clamp(58px,7vw,96px);
+    font-size:clamp(44px,12vw,64px);
+    line-height:.95;
+    letter-spacing:-2px;
+  }
 
-    line-height:.90;
+  .subtitle{
+    font-size:20px;
+  }
 
-    letter-spacing:-3px;
+  .section{
+    padding:70px 18px;
+  }
 
-    margin:25px 0;
+  .page-header h1{
+    font-size:42px;
+  }
 
-    font-weight:900;
+  .price-grid{
+    grid-template-columns:1fr;
+  }
 
-    color:var(--brown);
-}
-}
-/* ===== ESPECIALIDADES MÁS MODERNAS ===== */
-
-#especialidades{
-  position:relative;
-}
-
-#especialidades .feature-grid{
-  margin-top:20px;
-}
-
-#especialidades article{
-  padding:0;
-  overflow:hidden;
-  border-radius:34px;
-  background:white;
-}
-
-#especialidades article img{
-  height:280px;
-  border-radius:0;
-  margin:0;
-}
-
-#especialidades article h3{
-  padding:26px 26px 0;
-  font-size:26px;
-}
-
-#especialidades article p{
-  padding:0 26px 30px;
-  font-size:17px;
-  line-height:1.55;
-}
-/* ===== MENÚ PRINCIPAL PREMIUM ===== */
-
-#carta .menu-card{
-    background:#fff;
-    border-radius:34px;
-    overflow:hidden;
-    padding:0;
-    transition:.35s;
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-#carta .menu-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
-    border-radius:0;
-    transition:.45s;
-}
-
-#carta .menu-card:hover img{
-    transform:scale(1.08);
-}
-
-#carta .menu-card h3{
-    font-size:28px;
-    padding:22px 24px 8px;
-    margin:0;
-    color:#173f2a;
-}
-
-#carta .menu-card p{
-    padding:0 24px 28px;
-    margin:0;
-    color:#765944;
-    font-size:16px;
-    line-height:1.6;
-}
-
-#carta .menu-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 30px 60px rgba(0,0,0,.15);
-}
-/* HERO PREMIUM */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-}
-
-.hero-buttons{
-
-    margin-top:45px;
-
-}
-
-.hero-buttons .btn{
-
-    font-size:18px;
-
-    padding:18px 34px;
-
-}
-
-.hero-image{
-
-    justify-content:flex-end;
-
-}
-
-.hero-image img:hover{
-
-    transform:
-        translateY(-8px)
-        rotate(.5deg)
-        scale(1.03);
-
+  .whatsapp{
+    right:16px;
+    bottom:16px;
+  }
 }
