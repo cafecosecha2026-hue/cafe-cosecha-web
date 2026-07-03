@@ -49,20 +49,29 @@ linear-gradient(135deg,#fffdf8,#f7e5c9);}
 }
 
 .navbar{
+  position:sticky;
+  top:15px;
+  z-index:9999;
+
   max-width:1180px;
-  margin:auto;
+  margin:0 auto;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:20px;
+
   padding:18px 22px;
+
   border:1px solid rgba(234,216,189,.85);
   border-radius:999px;
-  background:rgba(255,255,255,.65);
-  backdrop-filter:blur(14px);
-  box-shadow:0 12px 40px rgba(43,23,15,.08);
-  position:relative;
-  z-index:2;
+
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(18px);
+
+  box-shadow:0 15px 45px rgba(43,23,15,.12);
+
+  transition:.35s;
 }
 
 .brand{
@@ -748,4 +757,28 @@ grid-template-columns:repeat(4,1fr) !important;
 .price-card span{
     font-weight:bold;
     color:var(--brown);
+}
+/* ===== ANIMACIONES SUAVES ===== */
+
+.section,
+.hero-text,
+.hero-image,
+.menu-card,
+.feature-grid article,
+.gallery-card,
+.price-card,
+.contact-grid div {
+  animation: fadeUp .8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
