@@ -731,11 +731,45 @@ footer small{
 
 @media(max-width:700px){
     .menu-grid{
-    grid-template-columns:1fr;
-    width:100%;
-    max-width:420px;
-    margin:0 auto;
-  }
+  grid-template-columns:1fr;
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+}
+
+/* Ajustes para móvil */
+  /* Ajustes para móvil */
+
+/* Deja espacio para que el menú no tape los títulos */
+.section{
+  scroll-margin-top: 150px;
+}
+
+/* Menú superior más compacto */
+.navbar{
+  top: 8px;
+  width: calc(100% - 24px);
+  padding: 12px 14px;
+}
+
+.navbar h1{
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.nav-links{
+  gap: 10px 18px;
+  font-size: 14px;
+}
+
+/* Evita que el botón de WhatsApp tape el contenido */
+.menu-card{
+  position: relative;
+}
+
+#carta{
+  padding-bottom: 90px;
+}
 
   #carta .menu-card{
     width:100%;
@@ -803,7 +837,9 @@ footer small{
   }
 
   .whatsapp{
-    right:16px;
-    bottom:16px;
-  }
+  right:12px;
+  bottom:12px;
+  padding:12px 18px;
+  font-size:14px;
+}
 }
