@@ -248,8 +248,9 @@ h1{
 }
 
 .menu-grid{
-  grid-template-columns:repeat(3, 265px);
+  grid-template-columns:repeat(3, minmax(0, 265px));
   justify-content:center;
+  gap:22px;
 }
 
 .gallery{
@@ -729,6 +730,31 @@ footer small{
 }
 
 @media(max-width:700px){
+    .menu-grid{
+    grid-template-columns:1fr;
+    width:100%;
+    max-width:420px;
+    margin:0 auto;
+  }
+
+  #carta .menu-card{
+    width:100%;
+  }
+
+  .navbar{
+    top:8px;
+    width:calc(100% - 20px);
+    padding:12px 14px;
+  }
+
+  .nav-links{
+    gap:12px 16px;
+    font-size:13px;
+  }
+
+  .section{
+    scroll-margin-top:170px;
+  }
   .hero{
     padding:120px 16px 24px;
   }
