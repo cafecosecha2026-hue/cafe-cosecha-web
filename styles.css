@@ -248,7 +248,8 @@ h1{
 }
 
 .menu-grid{
-  grid-template-columns:repeat(31fr);
+  grid-template-columns:repeat(3, 265px);
+  justify-content:center;
 }
 
 .gallery{
@@ -702,7 +703,6 @@ footer small{
   }
 
   .feature-grid,
-  .menu-grid,
   .gallery,
   .contact-grid,
   .price-grid{
