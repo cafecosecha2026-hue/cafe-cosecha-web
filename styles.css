@@ -248,7 +248,7 @@ h1{
 }
 
 .menu-grid{
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(31fr);
 }
 
 .gallery{
