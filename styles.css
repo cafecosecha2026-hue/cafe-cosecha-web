@@ -843,3 +843,13 @@ footer small{
   font-size:14px;
 }
 }
+/* FOTOS DE LOS PLATOS PARA PICAR */
+
+.product-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 16px 0 18px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(43, 23, 15, 0.16);
+}
