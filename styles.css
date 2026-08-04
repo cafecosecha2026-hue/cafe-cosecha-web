@@ -911,3 +911,13 @@ footer small{
     height: 220px;
   }
 }
+.foto-menu {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  object-position: center;
+  margin: 18px 0 24px;
+  border-radius: 18px;
+  box-shadow: 0 10px 22px rgba(62, 38, 23, 0.15);
+}
