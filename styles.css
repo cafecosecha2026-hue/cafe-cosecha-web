@@ -921,3 +921,12 @@ footer small{
   border-radius: 18px;
   box-shadow: 0 10px 22px rgba(62, 38, 23, 0.15);
 }
+.foto-menu {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+  margin: 18px 0 24px;
+  border-radius: 18px;
+}
