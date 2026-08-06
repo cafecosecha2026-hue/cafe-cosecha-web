@@ -930,3 +930,18 @@ footer small{
   margin: 18px 0 24px;
   border-radius: 18px;
 }
+/* FOTOS DE LOS VERMUTS */
+
+.price-card .foto-menu {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  margin: 12px 0 16px;
+  display: block;
+}
+
+.vermut-foto-segunda {
+  margin-top: 28px !important;
+}
