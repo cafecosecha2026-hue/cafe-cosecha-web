@@ -961,3 +961,117 @@ footer small{
     border-top:1px solid rgba(0,0,0,.08);
     margin:28px 0;
 }
+/* PÁGINA DE FRAPPUCCINOS */
+
+.frappuccino-grid {
+  width: 100%;
+  max-width: 1150px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.frappuccino-card {
+  background: #ffffff;
+  border: 1px solid rgba(187, 130, 65, 0.28);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(70, 45, 25, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.frappuccino-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(70, 45, 25, 0.13);
+}
+
+.frappuccino-card img {
+  width: 100%;
+  height: 360px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.frappuccino-content {
+  padding: 24px;
+}
+
+.frappuccino-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.frappuccino-title h3 {
+  margin: 0;
+  color: #164b31;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.frappuccino-content p {
+  margin: 0;
+  color: #765b49;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.frappuccino-title .product-price {
+  color: #164b31;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+/* MÓVIL */
+
+@media (max-width: 768px) {
+
+  .frappuccino-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 25px;
+  }
+
+  .frappuccino-card {
+    border-radius: 24px;
+  }
+
+  .frappuccino-card img {
+    height: 330px;
+  }
+
+  .frappuccino-content {
+    padding: 22px;
+  }
+
+  .frappuccino-title h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .frappuccino-card img {
+    height: 290px;
+  }
+
+  .frappuccino-title {
+    gap: 12px;
+  }
+
+  .frappuccino-title h3 {
+    font-size: 1.15rem;
+  }
+
+  .frappuccino-title .product-price {
+    font-size: 1.05rem;
+  }
+
+  .frappuccino-content p {
+    font-size: 0.96rem;
+  }
+}
