@@ -287,15 +287,39 @@
   </a>
 
   <!-- ASISTENTE VIRTUAL CAFÉ & CO.SECHA -->
-<a
-  href="https://cafe-cosecha-ai.onrender.com"
-  target="_blank"
-  rel="noopener noreferrer"
+
+<button
   class="asistente-ia"
+  id="boton-asistente"
+  type="button"
   aria-label="Abrir asistente virtual de Café & Co.Secha"
 >
   💬 ¿Te ayudo?
-</a>
+</button>
+
+<div id="ventana-asistente" class="ventana-asistente">
+  <div class="cabecera-asistente">
+    <div>
+      <strong>☕ Café & Co.Secha</strong>
+      <span>● Asistente virtual</span>
+    </div>
+
+    <button
+      id="cerrar-asistente"
+      class="cerrar-asistente"
+      type="button"
+      aria-label="Cerrar asistente"
+    >
+      ×
+    </button>
+  </div>
+
+  <iframe
+    src="https://cafe-cosecha-ai.onrender.com"
+    title="Asistente virtual de Café & Co.Secha"
+    class="iframe-asistente"
+  ></iframe>
+</div>
 
 <style>
   .asistente-ia {
@@ -325,7 +349,86 @@
   .asistente-ia:hover {
     transform: translateY(-2px);
   }
+/* VENTANA DEL ASISTENTE */
 
+.ventana-asistente {
+  position: fixed;
+  right: 20px;
+  bottom: 155px;
+  width: 390px;
+  height: 600px;
+  max-height: calc(100vh - 180px);
+
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
+  z-index: 10000;
+
+  display: none;
+  flex-direction: column;
+}
+
+.ventana-asistente.abierto {
+  display: flex;
+}
+
+.cabecera-asistente {
+  background: #315f49;
+  color: white;
+
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecera-asistente strong {
+  display: block;
+  font-size: 16px;
+}
+
+.cabecera-asistente span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.cerrar-asistente {
+  border: none;
+  background: transparent;
+  color: white;
+
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.iframe-asistente {
+  width: 100%;
+  flex: 1;
+  border: none;
+  background: #faf8f4;
+}
+
+@media (max-width: 600px) {
+  .ventana-asistente {
+    right: 10px;
+    left: 10px;
+    bottom: 150px;
+
+    width: auto;
+    height: 65vh;
+    max-height: 620px;
+
+    border-radius: 18px;
+  }
+}
   @media (max-width: 600px) {
     .asistente-ia {
       right: 15px;
@@ -335,6 +438,20 @@
     }
   }
 </style>
+<script>
+  const botonAsistente = document.getElementById("boton-asistente");
+  const ventanaAsistente = document.getElementById("ventana-asistente");
+  const cerrarAsistente = document.getElementById("cerrar-asistente");
+
+  botonAsistente.addEventListener("click", function () {
+    ventanaAsistente.classList.toggle("abierto");
+  });
+
+  cerrarAsistente.addEventListener("click", function () {
+    ventanaAsistente.classList.remove("abierto");
+  });
+</script>
+
 
 </body>
 
