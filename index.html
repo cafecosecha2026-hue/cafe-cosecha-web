@@ -444,7 +444,20 @@
   const botonAsistente = document.getElementById("boton-asistente");
   const ventanaAsistente = document.getElementById("ventana-asistente");
   const cerrarAsistente = document.getElementById("cerrar-asistente");
+if (window.visualViewport) {
+  const ajustarChatMovil = () => {
+    if (window.innerWidth <= 600) {
+      const altoVisible = window.visualViewport.height;
 
+      ventanaAsistente.style.height = `${altoVisible - 20}px`;
+      ventanaAsistente.style.top = "10px";
+      ventanaAsistente.style.bottom = "auto";
+    }
+  };
+
+  window.visualViewport.addEventListener("resize", ajustarChatMovil);
+  window.visualViewport.addEventListener("scroll", ajustarChatMovil);
+}
   botonAsistente.addEventListener("click", function () {
     ventanaAsistente.classList.toggle("abierto");
   });
