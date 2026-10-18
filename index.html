@@ -229,6 +229,13 @@
       >
         🌿 Unirme al Club CoSecha
       </button>
+      <button
+  type="button"
+  class="btn secondary club-boton"
+  id="consultar-puntos"
+>
+  🎁 Consultar mis puntos
+</button>
 
       <p class="club-gratis">
         Gratis · Sin tarjeta física
@@ -615,6 +622,16 @@ botonClub.addEventListener("click", function () {
 
   iframeAsistente.contentWindow.postMessage(
     "abrir-club-cosecha",
+    "https://cafe-cosecha-ai.onrender.com"
+  );
+});
+const botonConsultarPuntos = document.getElementById("consultar-puntos");
+
+botonConsultarPuntos.addEventListener("click", function () {
+  ventanaAsistente.classList.add("abierto");
+
+  iframeAsistente.contentWindow.postMessage(
+    "consultar-puntos-club",
     "https://cafe-cosecha-ai.onrender.com"
   );
 });

@@ -1075,3 +1075,41 @@ footer small{
     font-size: 0.96rem;
   }
 }
+
+/* Tarjeta Salchichitas Bacon Cheese */
+
+.salchichitas-card {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.salchichitas-card .foto-bowls {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.salchichitas-card .product-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.salchichitas-card .product-info {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+.salchichitas-card .product-info small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.salchichitas-card .product-price {
+  white-space: nowrap;
+}
