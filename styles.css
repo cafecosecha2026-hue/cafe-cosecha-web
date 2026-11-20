@@ -1113,3 +1113,85 @@ footer small{
 .salchichitas-card .product-price {
   white-space: nowrap;
 }
+
+/* =====================================
+   MERIENDAS - VERSION MOVIL
+   ===================================== */
+
+@media (max-width: 700px) {
+
+  /* Espaciado general */
+ .pagina-meriendas .section {
+    padding: 24px 14px 45px;
+  }
+
+  /* Titulo de la pagina */
+  .pagina-meriendas .page-header {
+    margin: 12px auto 25px;
+  }
+
+  .pagina-meriendas
+   .page-header h1 {
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin: 12px 0;
+  }
+
+  /* Tarjetas en una columna */
+  .pagina-meriendas .price-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  /* Tarjetas mas compactas */
+  .pagina-meriendas .price-card {
+    padding: 20px 18px;
+    border-radius: 22px;
+  }
+
+  /* Titulos de las categorias */
+  .pagina-meriendas .price-card h3 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  /* Filas de productos */
+  .pagina-meriendas .product-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 13px 0;
+  }
+
+  /* Nombres de productos */
+  .pagina-meriendas .product-info strong {
+    font-size: 17px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+
+  /* Descripciones */
+  .pagina-meriendas .product-info p {
+    font-size: 14px;
+    line-height: 1.45;
+    margin: 5px 0 0;
+  }
+
+  /* Precios */
+  .pagina-meriendas .price {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  /* Fotografias */
+  .pagina-meriendas .foto-bowls {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin: 12px 0 14px;
+  }
+
+}
