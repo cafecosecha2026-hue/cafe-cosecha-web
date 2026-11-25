@@ -1851,10 +1851,10 @@ body.pagina-inicio {
 .pagina-inicio #inicio.portada-cosecha::after {
   content: "";
   position: absolute;
-  left: -35px;
-  bottom: -22px;
-  width: 160px;
-  height: 140px;
+  left: 15px;
+  bottom: 8px;
+  width: 220px;
+  height: 190px;
   background: url("images/taza-cosecha.png")
     center bottom / contain no-repeat;
   pointer-events: none;
@@ -3059,6 +3059,197 @@ body.pagina-inicio {
 
   .footer-cosecha .footer-carino {
     font-size: 22px;
+  }
+
+}
+/* AJUSTE DE LA TAZA Y COMPOSICIÓN DE PORTADA */
+
+@media (min-width: 1000px) {
+
+  .pagina-inicio #inicio.portada-cosecha::after {
+    left: 5px;
+bottom: 5px;
+width: 235px;
+height: 195px;
+  }
+
+ .pagina-inicio #inicio .subtitle {
+  margin-left: 155px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+  .pagina-inicio #inicio .hero-buttons {
+  margin-left: 195px;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+  .pagina-inicio #inicio .hero-buttons .btn {
+    padding: 12px 18px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+}
+/* MEJORAR DECORACIÓN BOTÁNICA DEL ENCABEZADO */
+
+@media (min-width: 1000px) {
+
+  .pagina-inicio .navbar::before,
+  .pagina-inicio .navbar::after {
+    width: 115px;
+    height: 115px;
+    top: -30px;
+    background: url("images/hojas-cafeto-recortada.png")
+      center / contain no-repeat;
+    z-index: 3;
+  }
+
+  .pagina-inicio .navbar::before {
+  left: -60px;
+  transform: rotate(15deg);
+}
+
+.pagina-inicio .navbar::after {
+  right: -60px;
+  transform: scaleX(-1) rotate(15deg);
+}
+
+}
+
+/* DECORACIÓN DEL TÍTULO DE NUESTRA CARTA */
+
+@media (min-width: 1000px) {
+
+  .pagina-inicio #carta h2 {
+    gap: 15px;
+  }
+
+  .pagina-inicio #carta h2::before,
+  .pagina-inicio #carta h2::after {
+    flex: 0 0 85px;
+    height: 75px;
+    background: url("images/hojas-cafeto-recortada.png")
+      center / contain no-repeat;
+  }
+
+  .pagina-inicio #carta h2::before {
+    transform: rotate(-15deg);
+  }
+
+  .pagina-inicio #carta h2::after {
+    transform: scaleX(-1) rotate(-15deg);
+  }
+
+}
+/* AJUSTES DECORATIVOS PARA MÓVILES */
+
+@media (max-width: 700px) {
+
+  /* HOJAS DEL ENCABEZADO */
+
+  .pagina-inicio .navbar::before,
+  .pagina-inicio .navbar::after {
+    width: 65px;
+    height: 65px;
+    top: -8px;
+    background: url("images/hojas-cafeto-recortada.png")
+      center / contain no-repeat;
+  }
+
+  .pagina-inicio .navbar::before {
+    left: -12px;
+    transform: rotate(15deg);
+  }
+
+  .pagina-inicio .navbar::after {
+    right: -12px;
+    transform: scaleX(-1) rotate(15deg);
+  }
+
+  /* TAZA DECORATIVA */
+
+  .pagina-inicio #inicio.portada-cosecha {
+    padding-bottom: 65px;
+  }
+
+  .pagina-inicio #inicio.portada-cosecha::after {
+    left: 5px;
+    bottom: 5px;
+    width: 125px;
+    height: 100px;
+  }
+
+  /* HOJAS DE NUESTRA CARTA */
+
+  .pagina-inicio #carta h2 {
+    gap: 5px;
+  }
+
+  .pagina-inicio #carta h2::before,
+  .pagina-inicio #carta h2::after {
+    flex: 0 0 38px;
+    height: 45px;
+    background: url("images/hojas-cafeto-recortada.png")
+      center / contain no-repeat;
+  }
+
+  .pagina-inicio #carta h2::before {
+    transform: rotate(-15deg);
+  }
+
+  .pagina-inicio #carta h2::after {
+    transform: scaleX(-1) rotate(-15deg);
+  }
+
+}
+
+/* POSICIÓN DEFINITIVA DE LA TAZA EN MÓVILES */
+
+@media (max-width: 700px) {
+
+  .pagina-inicio #inicio.portada-cosecha {
+    padding-bottom: 20px;
+  }
+
+  .pagina-inicio #inicio.portada-cosecha::after {
+    display: none;
+  }
+
+  .pagina-inicio #inicio .hero-buttons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+  min-height: 75px;
+  gap: 6px;
+  margin: 0 0 5px;
+}
+
+.pagina-inicio #inicio .hero-buttons::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  bottom: 0;
+  width: 115px;
+  height: 100px;
+  background: url("images/taza-cosecha.png")
+    center bottom / contain no-repeat;
+  pointer-events: none;
+}
+
+  .pagina-inicio #inicio .hero-buttons .btn {
+    width: auto;
+    flex: 0 0 auto;
+    font-size: 11px;
+    padding: 11px 10px;
+    border-radius: 40px;
+    white-space: nowrap;
   }
 
 }
