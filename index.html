@@ -16,60 +16,106 @@
 
   <title>Café & Co.Secha | Cafetería en Ontinyent</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="pagina-inicio">
 
-  <!-- NAVEGACIÓN -->
+ 
+<!-- NAVEGACIÓN -->
 
-  <nav class="navbar">
-    <div class="brand">Café & Co.Secha</div>
+<nav class="navbar">
 
-    <div class="nav-links">
-      <a href="#inicio">Inicio</a>
-      <a href="#carta">Carta</a>
-      <a href="#historia">Historia</a>
-      <a href="#contacto">Ubicación</a>
+ <a href="#inicio" class="brand">
+  <img
+    src="images/logo-cosecha.png"
+    alt="Café & Co.Secha"
+    class="logo-navbar"
+  >
+</a>
+
+  <div class="nav-eslogan">
+    Cafés · Sabores · Encuentros ♡
+  </div>
+
+  <div class="nav-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#carta">Carta</a>
+    <a href="#historia">Historia</a>
+    <a href="#contacto">Ubicación</a>
+  </div>
+
+</nav>
+
+
+<!-- INICIO -->
+
+<section id="inicio" class="hero-grid portada-cosecha">
+
+  <div class="hero-text">
+
+    <p class="badge">
+      📍 Cafetería en Centro Comercial El Teler · Ontinyent
+    </p>
+
+    <h1>
+      Más que café,<br>
+      <span class="palabra-especial">momentos</span> que<br>
+      se quedan.
+    </h1>
+
+    <div class="detalle-corazon" aria-hidden="true">
+
+      <svg viewBox="0 0 440 65">
+        <path
+          d="M5 55 C130 10 280 80 380 30
+          C425 5 385 -15 380 20
+          C350 -15 335 30 410 48"
+          fill="none"
+          stroke="#995020"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+      </svg>
+
     </div>
-  </nav>
 
+    <p class="subtitle">
+      Bienvenidos a Café &amp; Co.Secha, un lugar donde
+      cada detalle está pensado para que disfrutes
+      sabores auténticos y experiencias que te hacen volver.
+    </p>
 
-  <!-- INICIO -->
+    <div class="hero-buttons">
 
-  <section id="inicio" class="hero-grid">
+      <a href="#carta" class="btn primary">
+        ☕ Ver carta
+      </a>
 
-    <div class="hero-text">
-      <p class="badge">
-        Cafetería en Centro Comercial El Teler · Ontinyent
-      </p>
+      <a href="#contacto" class="btn secondary">
+        📍 Cómo llegar
+      </a>
 
-      <h1>Más que café, momentos que se quedan.</h1>
-
-      <p class="subtitle">
-        Bienvenidos a Café & Co.Secha, un lugar donde cada detalle está pensado
-        para que disfrutes sabores auténticos y experiencias que te hacen volver.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#carta" class="btn primary">
-          Ver carta
-        </a>
-
-        <a href="#contacto" class="btn secondary">
-          Cómo llegar
-        </a>
-      </div>
     </div>
 
-    <div class="hero-image">
-      <img
-        src="images/local.jpg"
-        alt="Interior de Café & Co.Secha"
-      >
-    </div>
+  </div>
 
-  </section>
+  <div class="hero-image">
+
+    <img
+      src="images/local.jpg"
+      alt="Interior de Café &amp; Co.Secha"
+    >
+
+  </div>
+
+</section>
+
+
+
 
 
   
@@ -187,47 +233,88 @@ FIN DESAYUNOS OCULTOS -->
 
   </section>
 
-    <!-- CLUB COSECHA -->
+    
+<!-- CLUB COSECHA -->
 
-  <section id="club-cosecha" class="section club-cosecha">
+<section id="club-cosecha" class="section club-cosecha">
 
-    <div class="club-contenido">
+  <div class="club-contenido">
 
-      <p class="eyebrow">🌿 Club CoSecha</p>
+    <span class="eyebrow">🌿 CLUB COSECHA</span>
 
-      <h2>Ven, suma puntos y déjate sorprender 🎁</h2>
+    <h2>
+      Cada visita cuenta,<br>
+      <em>cada momento suma.</em>
+    </h2>
 
-      <p class="club-intro">
-        Disfrutar de Co.Secha ahora tiene premio.
-        Únete gratis a nuestro club y acumula puntos con tus compras.
-      </p>
+    <div class="club-linea"></div>
 
-      <div class="club-beneficios">
+    <p class="club-intro">
+      Disfrutar de Co.Secha tiene premio.
+      Únete gratis a nuestro club y convierte tus visitas
+      en pequeñas alegrías.
+    </p>
 
-        <div class="club-beneficio">
-          <span>🛍️</span>
-          <strong>Compra</strong>
-          <p>Por cada compra de 5 € o más consigues 1 punto.</p>
+    <div class="club-beneficios">
+
+      <div class="club-beneficio">
+        <span class="club-icono">🛍️</span>
+
+        <div class="club-texto">
+          <strong>Disfruta</strong>
+          <p>
+            Por cada compra de 5 € o más,
+            consigues 1 punto.
+          </p>
         </div>
 
-        <div class="club-beneficio">
-          <span>🌿</span>
-          <strong>Suma puntos</strong>
-          <p>Guardamos tus puntos para que puedas seguir acumulándolos en tus visitas.</p>
-        </div>
-
-        <div class="club-beneficio">
-          <span>🎁</span>
-          <strong>Premio sorpresa</strong>
-          <p>Cada 10 puntos desbloqueas una recompensa sorpresa.</p>
-        </div>
-
+        <span class="club-numero">01</span>
       </div>
 
+      <div class="club-beneficio">
+        <span class="club-icono">🌿</span>
+
+        <div class="club-texto">
+          <strong>Suma puntos</strong>
+          <p>
+            Acumula puntos cada vez que nos visites.
+          </p>
+        </div>
+
+        <span class="club-numero">02</span>
+      </div>
+
+      <div class="club-beneficio">
+        <span class="club-icono">🎁</span>
+
+        <div class="club-texto">
+          <strong>Déjate sorprender</strong>
+          <p>
+            Cada 10 puntos desbloqueas
+            una recompensa sorpresa.
+          </p>
+        </div>
+
+        <span class="club-numero">03</span>
+      </div>
+
+    </div>
+
+    <div class="club-sorpresa">
+
+      <span class="club-regalo">🎁</span>
+
+      <h3>¿Cuál será tu próxima sorpresa?</h3>
+
       <p class="club-premios">
-        Tu sorpresa puede ser un Frappuccino, una oblea, un mojito,
-        algo para picar, 5 € de descuento... ¡y más!
+        Un Frappuccino, una oblea, un mojito,
+        algo para picar, 5 € de descuento…
+        ¡y mucho más!
       </p>
+
+    </div>
+
+    <div class="club-acciones">
 
       <button
         type="button"
@@ -236,21 +323,25 @@ FIN DESAYUNOS OCULTOS -->
       >
         🌿 Unirme al Club CoSecha
       </button>
-      <button
-  type="button"
-  class="btn secondary club-boton"
-  id="consultar-puntos"
->
-  🎁 Consultar mis puntos
-</button>
 
-      <p class="club-gratis">
-        Gratis · Sin tarjeta física
-      </p>
+      <button
+        type="button"
+        class="btn secondary club-boton"
+        id="consultar-puntos"
+      >
+        Consultar mis puntos
+      </button>
 
     </div>
 
-  </section>
+    <p class="club-gratis">
+      Gratis · Sin tarjeta física
+    </p>
+
+  </div>
+
+</section>
+
 
  
 <!-- NUESTRA HISTORIA -->
@@ -313,80 +404,211 @@ FIN DESAYUNOS OCULTOS -->
 
 
 
-  <!-- CONTACTO -->
+  
+<!-- CONTACTO -->
 
-  <section id="contacto" class="section contact">
+<section id="contacto" class="section contact visita-cosecha">
 
-    <span class="eyebrow">
-      Visítanos
-    </span>
+  <span class="eyebrow">VISÍTANOS</span>
 
-    <h2>Te esperamos</h2>
+  <h2>Te esperamos</h2>
 
-    <div class="contact-grid">
+  <p class="visita-subtitulo">
+    Para compartir buenos momentos.
+  </p>
 
-      <div>
-        <h3>📍 Dirección</h3>
+  <div class="visita-linea"></div>
 
-        <p>
-          Carrer del Pintor Segrelles, 1<br>
-          Centro Comercial El Teler, piso 3<br>
-          46870 · Ontinyent
-        </p>
+  <div class="contact-grid">
+
+    <!-- DIRECCIÓN -->
+
+    <div class="visita-tarjeta">
+
+      <span class="visita-icono">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.6">
+          <path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </span>
+
+      <h3>Encuéntranos</h3>
+
+      <p>
+        Carrer del Pintor Segrelles, 1<br>
+        Centro Comercial El Teler<br>
+        <strong>Piso 3</strong><br>
+        46870 · Ontinyent
+      </p>
+
+      <a
+        class="btn primary visita-boton"
+        href="https://maps.google.com/?q=Carrer+del+Pintor+Segrelles+1+Ontinyent"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Cómo llegar
+      </a>
+
+    </div>
+
+    <!-- HORARIO -->
+
+    <div class="visita-tarjeta">
+
+      <span class="visita-icono">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+      </span>
+
+      <h3>Nuestro horario</h3>
+
+      <p>Martes a domingo</p>
+
+      <strong class="visita-horario">
+        17:00 — 00:00
+      </strong>
+
+      <span class="visita-cerrado">
+        Lunes cerrado
+      </span>
+
+    </div>
+
+    <!-- REDES SOCIALES -->
+
+    <div class="visita-tarjeta">
+
+      <span class="visita-icono">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.6">
+          <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8Z"/>
+        </svg>
+      </span>
+
+      <h3>Sigamos conectados</h3>
+
+      <p>No te pierdas nuestras novedades.</p>
+
+      <div class="visita-redes">
 
         <a
-          class="btn primary"
-          href="https://maps.google.com/?q=Carrer+del+Pintor+Segrelles+1+Ontinyent"
+          href="https://www.instagram.com/cafeco.secha2026/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Cómo llegar
+          <svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.7">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1"/>
+          </svg>
+          @cafeco.secha2026
         </a>
-      </div>
 
+        <a
+          href="https://www.facebook.com/profile.php?id=61590728134737"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14 21v-8h3l.5-3H14V8c0-1 .3-2 2-2h2V3.3C17 3.1 16 3 15 3c-3 0-5 1.8-5 5v2H7v3h3v8z"/>
+          </svg>
+          Café &amp; Co.Secha
+        </a>
 
-      <div>
-        <h3>🕒 Horario</h3>
-
-        
-<p>
-  Martes a domingo<br>
-  17:00 — 00:00<br><br>
-  Lunes cerrado
-</p>
-
-      </div>
-
-
-      <div>
-        <h3>📱 Síguenos</h3>
-
-        <p>
-          Instagram:
-          <a
-            href="https://www.instagram.com/cafeco.secha2026/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @cafeco.secha2026
-          </a>
-        </p>
-
-        <p>
-          Facebook:
-          <a
-            href="https://www.facebook.com/profile.php?id=61590728134737"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Café & Co.Secha
-          </a>
-        </p>
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+  <p class="visita-despedida">
+    Siempre hay una buena excusa para volver. ♡
+  </p>
+
+</section>
+
+<!-- PIE DE PÁGINA -->
+
+<footer class="footer-cosecha">
+
+  <a href="#inicio">
+    <img
+      src="images/logo-cosecha.png"
+      alt="Café & Co.Secha"
+      class="footer-logo"
+    >
+  </a>
+
+  <h3>Dos culturas, infinitos sabores.</h3>
+
+  <p class="footer-frase">
+    Un lugar al que siempre apetece volver.
+  </p>
+
+  <div class="footer-redes">
+
+    <a href="https://www.instagram.com/cafeco.secha2026/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+
+      <svg viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.6">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1"/>
+      </svg>
+
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61590728134737"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook">
+
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M14 21v-8h3l.5-3H14V8c0-1 .3-2 2-2h2V3.3C17 3.1 16 3 15 3c-3 0-5 1.8-5 5v2H7v3h3v8z"/>
+      </svg>
+
+    </a>
+
+    <a href="#contacto" aria-label="Contacto">
+
+      <svg viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.6">
+        <path d="M21 11.5a9 9 0 0 1-9 9 10 10 0 0 1-4-.9L3 21l1.4-5A9 9 0 1 1 21 11.5Z"/>
+      </svg>
+
+    </a>
+
+  </div>
+
+  <div class="footer-linea"></div>
+
+  <nav class="footer-enlaces">
+    <a href="#inicio">Inicio</a>
+    <a href="#carta">Carta</a>
+    <a href="#historia">Historia</a>
+    <a href="#contacto">Ubicación</a>
+  </nav>
+
+  <small class="footer-derechos">
+    © 2026 Café &amp; Co.Secha · Ontinyent
+    <br>
+    Todos los derechos reservados.
+  </small>
+
+  <p class="footer-carino">
+    Creado con ilusión, servido con cariño. ♡
+  </p>
+
+</footer>
 
 
   <!-- BOTÓN WHATSAPP -->

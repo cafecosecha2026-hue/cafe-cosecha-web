@@ -1605,3 +1605,1460 @@ height: calc(100dvh - 24px);
 
 }
 
+/* ==========================================
+  
+/* ==========================================
+   PORTADA CAFÉ & CO.SECHA
+   ========================================== */
+
+body.pagina-inicio {
+  background:
+    radial-gradient(ellipse at top left, #e7e8d4, transparent 40%),
+    radial-gradient(ellipse at top right, #e7e8d4, transparent 40%),
+    #fcf5e8;
+}
+
+/* ENCABEZADO */
+
+.pagina-inicio .navbar {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: calc(100% - 48px);
+  max-width: 1350px;
+  margin: 22px auto;
+  padding: 12px 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #103c27;
+  border: 1px solid #c5a36b;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(43,23,15,.12);
+}
+
+.pagina-inicio .brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagina-inicio .logo-navbar {
+  display: block;
+  width: 270px;
+  height: auto;
+}
+
+.nav-eslogan {
+  font-family: 'Dancing Script', cursive;
+  font-size: 27px;
+  font-weight: 600;
+  color: #f4dfb7;
+  border-left: 1px solid #c5a36b;
+  padding-left: 24px;
+}
+
+.pagina-inicio .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagina-inicio .nav-links a {
+  color: #fff5df;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 20px;
+  transition: .25s;
+}
+
+.pagina-inicio .nav-links a:hover {
+  background: #fff5df;
+  color: #103c27;
+}
+
+/* RAMAS DE CAFÉ */
+
+.pagina-inicio .navbar::before,
+.pagina-inicio .navbar::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 115px;
+  height: 115px;
+  background: url("images/hojas-cafeto.png")
+    center / contain no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pagina-inicio .navbar::before {
+  left: -30px;
+  transform: rotate(110deg);
+}
+
+.pagina-inicio .navbar::after {
+  right: -30px;
+  transform: scaleX(-1) rotate(110deg);
+}
+
+.pagina-inicio .navbar > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* PORTADA PRINCIPAL */
+
+.pagina-inicio #inicio.portada-cosecha {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 45px;
+  width: calc(100% - 48px);
+  max-width: 1350px;
+  margin: 25px auto 40px;
+  padding: 40px;
+  border-radius: 35px;
+  border: 2px solid #fff9ed;
+  background: radial-gradient(
+    ellipse at center,
+    #fffaf0,
+    #f7e8ce
+  );
+  box-shadow: 0 15px 40px rgba(75,45,20,.08);
+}
+
+#inicio .hero-text {
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+#inicio .badge {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 18px;
+  background: #fff6e6;
+  border: 1px solid #dfc39b;
+  color: #173f2a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* TITULO */
+
+.pagina-inicio #inicio h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(36px, 4.5vw, 65px);
+  font-weight: 700;
+  color: #103c27;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin: 25px 0 0;
+}
+
+#inicio h1 .palabra-especial {
+  display: inline-block;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2em;
+  color: #79401c;
+  padding: 0 8px;
+  background: linear-gradient(
+    transparent 55%,
+    rgba(235,170,75,.35) 55%,
+    rgba(235,170,75,.35) 90%,
+    transparent 90%
+  );
+  border-radius: 35% 10% 30% 8%;
+}
+
+/* CORAZÓN */
+
+.detalle-corazon {
+  width: 85%;
+  max-width: 440px;
+  margin: 0 auto 10px;
+}
+
+.detalle-corazon svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* BIENVENIDA */
+
+.pagina-inicio #inicio .subtitle {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #634b38;
+  margin: 10px 0 25px;
+}
+
+/* BOTONES */
+
+#inicio .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+#inicio .hero-buttons .btn {
+  padding: 15px 25px;
+  font-size: 15px;
+  border-radius: 40px;
+  border: 1px solid #e6cda3;
+}
+
+#inicio .hero-buttons .primary {
+  background: #103c27;
+  color: white;
+}
+
+#inicio .hero-buttons .secondary {
+  background: linear-gradient(
+    135deg, #f58a19, #d46008
+  );
+  color: white;
+}
+
+/* FOTO DEL LOCAL */
+
+#inicio .hero-image {
+  position: relative;
+  min-width: 0;
+  overflow: visible;
+}
+
+#inicio .hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  border: 5px solid #fff7e8;
+  border-radius: 65px 25px 65px 25px;
+  box-shadow: 0 20px 40px rgba(75,45,20,.18);
+}
+
+/* TAZA DECORATIVA */
+
+.pagina-inicio #inicio.portada-cosecha::after {
+  content: "";
+  position: absolute;
+  left: -35px;
+  bottom: -22px;
+  width: 160px;
+  height: 140px;
+  background: url("images/taza-cosecha.png")
+    center bottom / contain no-repeat;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* NUESTRA CARTA */
+
+.pagina-inicio #carta {
+  margin-top: 40px;
+  width: calc(100% - 32px);
+}
+
+.pagina-inicio #carta > .eyebrow {
+  background: #f5dfbb;
+  color: #173f2a;
+}
+
+.pagina-inicio #carta h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(26px, 3.2vw, 46px);
+  line-height: 1.3;
+  color: #103c27;
+}
+
+.pagina-inicio #carta h2::before,
+.pagina-inicio #carta h2::after {
+  content: "";
+  display: block;
+  flex: 0 0 60px;
+  height: 60px;
+  background: url("images/hojas-cafeto.png")
+    center / contain no-repeat;
+}
+
+.pagina-inicio #carta h2::before {
+  transform: rotate(25deg);
+}
+
+.pagina-inicio #carta h2::after {
+  transform: scaleX(-1) rotate(25deg);
+}
+
+/* TABLETS */
+
+@media (max-width: 1100px) {
+
+  .nav-eslogan {
+    display: none;
+  }
+
+  .pagina-inicio #inicio.portada-cosecha {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    gap: 30px;
+  }
+
+  #inicio .hero-text {
+    text-align: center;
+  }
+
+  #inicio .hero-buttons {
+    justify-content: center;
+  }
+
+  .pagina-inicio #inicio .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* MÓVILES */
+
+@media (max-width: 700px) {
+
+  .pagina-inicio .navbar {
+    width: calc(100% - 24px);
+    margin: 12px auto;
+    padding: 12px 10px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 20px;
+  }
+
+  .pagina-inicio .logo-navbar {
+    width: 220px;
+  }
+
+  .pagina-inicio .navbar::before,
+  .pagina-inicio .navbar::after {
+    display: block;
+    width: 70px;
+    height: 85px;
+    top: -6px;
+  }
+
+  .pagina-inicio .navbar::before {
+    left: -8px;
+  }
+
+  .pagina-inicio .navbar::after {
+    right: -8px;
+  }
+
+  .pagina-inicio .nav-links {
+    gap: 5px;
+  }
+
+  .pagina-inicio .nav-links a {
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .pagina-inicio #inicio.portada-cosecha {
+    width: calc(100% - 24px);
+    margin: 15px auto 35px;
+    padding: 20px 16px 32px;
+    gap: 20px;
+    border-radius: 25px;
+  }
+
+  #inicio .badge {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+
+  .pagina-inicio #inicio h1 {
+    font-size: clamp(30px, 8.5vw, 40px);
+    line-height: 1.13;
+    margin-top: 18px;
+  }
+
+  #inicio .detalle-corazon {
+    width: 78%;
+    margin-bottom: 4px;
+  }
+
+  .pagina-inicio #inicio .subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6px 0 15px;
+  }
+
+  #inicio .hero-buttons {
+    margin-top: 12px;
+    gap: 10px;
+  }
+
+  #inicio .hero-buttons .btn {
+    font-size: 13px;
+    padding: 12px 16px;
+  }
+
+  #inicio .hero-image {
+    overflow: visible;
+  }
+
+  #inicio .hero-image img {
+    border-radius: 32px 16px 32px 16px;
+    border-width: 4px;
+  }
+
+  .pagina-inicio #inicio.portada-cosecha::after {
+    display: block;
+    width: 110px;
+    height: 95px;
+    left: -8px;
+    bottom: -20px;
+  }
+
+  .pagina-inicio #carta {
+    margin-top: 30px;
+  }
+
+  .pagina-inicio #carta h2 {
+    font-size: 27px;
+    gap: 6px;
+  }
+
+  .pagina-inicio #carta h2::before,
+  .pagina-inicio #carta h2::after {
+    flex-basis: 30px;
+    height: 35px;
+  }
+}
+/* RETOQUES FINALES PARA MÓVILES */
+
+@media (max-width: 700px) {
+
+  /* Ramas del encabezado */
+  .pagina-inicio .navbar::before,
+  .pagina-inicio .navbar::after {
+    width: 100px;
+    height: 110px;
+    background-size: 190%;
+    top: -12px;
+  }
+
+  .pagina-inicio .navbar::before {
+    left: -18px;
+  }
+
+  .pagina-inicio .navbar::after {
+    right: -18px;
+  }
+
+  /* Logo */
+  .pagina-inicio .logo-navbar {
+    width: 235px;
+  }
+
+  /* Espacio para la taza */
+  .pagina-inicio #inicio.portada-cosecha {
+    padding-bottom: 55px;
+  }
+
+  /* Taza decorativa */
+  .pagina-inicio #inicio.portada-cosecha::after {
+    width: 135px;
+    height: 115px;
+    left: -5px;
+    bottom: -8px;
+  }
+
+  /* Asistente virtual */
+  .pagina-inicio #boton-asistente {
+    font-size: 11px;
+    padding: 8px 11px;
+    bottom: 58px;
+    right: 8px;
+  }
+
+  /* WhatsApp */
+  .pagina-inicio .whatsapp {
+    font-size: 11px;
+    padding: 9px 12px;
+    bottom: 10px;
+    right: 8px;
+  }
+
+}
+/* CORRECCIÓN DEL ANCHO EN MÓVILES */
+
+@media (max-width: 700px) {
+
+  html,
+  body.pagina-inicio {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .pagina-inicio .navbar,
+  .pagina-inicio #inicio.portada-cosecha {
+    box-sizing: border-box;
+    max-width: calc(100% - 24px);
+  }
+
+  /* Ramas dentro del encabezado */
+
+  .pagina-inicio .navbar::before,
+  .pagina-inicio .navbar::after {
+    width: 85px;
+    height: 95px;
+    background-size: contain;
+    top: 0;
+  }
+
+  .pagina-inicio .navbar::before {
+    left: 0;
+  }
+
+  .pagina-inicio .navbar::after {
+    right: 0;
+  }
+
+  /* Botones flotantes */
+
+  .pagina-inicio #boton-asistente {
+    position: fixed;
+    right: 10px;
+    left: auto;
+    bottom: 65px;
+  }
+
+  .pagina-inicio .whatsapp {
+    position: fixed;
+    right: 10px;
+    left: auto;
+    bottom: 15px;
+  }
+
+}
+
+/* ==========================================
+   NUEVO DISEÑO CLUB COSECHA
+   ========================================== */
+
+.pagina-inicio #club-cosecha {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 48px);
+  max-width: 1350px;
+  margin: 40px auto;
+  padding: 55px 40px 35px;
+  overflow: hidden;
+  text-align: center;
+
+  background: radial-gradient(
+    ellipse at top,
+    #204d36,
+    #103c27 55%,
+    #0c2d20
+  );
+
+  border: 1px solid #c5a36b;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(16,60,39,.15);
+  color: #fff5df;
+}
+
+/* RAMAS DECORATIVAS */
+
+#club-cosecha::before,
+#club-cosecha::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  width: 180px;
+  height: 180px;
+  background: url("images/hojas-cafeto.png")
+    center / 180% no-repeat;
+  pointer-events: none;
+}
+
+#club-cosecha::before {
+  left: -20px;
+  transform: rotate(110deg);
+}
+
+#club-cosecha::after {
+  right: -20px;
+  transform: scaleX(-1) rotate(110deg);
+}
+
+/* CONTENIDO */
+
+#club-cosecha .club-contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#club-cosecha .eyebrow {
+  display: inline-block;
+  padding: 9px 20px;
+  background: #f4dfb7;
+  color: #103c27;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* TITULO PRINCIPAL */
+
+#club-cosecha h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #fff5df;
+  margin: 22px 0 15px;
+}
+
+#club-cosecha h2 em {
+  color: #e9c58c;
+  font-weight: 500;
+}
+
+#club-cosecha .club-linea {
+  width: 85px;
+  height: 2px;
+  background: #c5a36b;
+  margin: 20px auto;
+}
+
+#club-cosecha .club-intro {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f4e7cf;
+}
+
+/* TARJETAS DE BENEFICIOS */
+
+#club-cosecha .club-beneficios {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 30px 0;
+}
+
+#club-cosecha .club-beneficio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  min-width: 0;
+  padding: 28px 20px;
+  background: #f8ecd6;
+  border: 1px solid #d9bd8e;
+  border-radius: 22px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+#club-cosecha .club-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  background: #103c27;
+  border: 1px solid #c5a36b;
+  border-radius: 50%;
+  font-size: 27px;
+}
+
+#club-cosecha .club-texto {
+  min-width: 0;
+}
+
+#club-cosecha .club-texto strong {
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #103c27;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+#club-cosecha .club-texto p {
+  color: #634b38;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#club-cosecha .club-numero {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  margin: 0;
+  color: #b49a70;
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+/* PREMIOS */
+
+#club-cosecha .club-sorpresa {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 22px 10px;
+  border-top: 1px solid rgba(197,163,107,.4);
+}
+
+#club-cosecha .club-regalo {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#club-cosecha .club-sorpresa h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  color: #e9c58c;
+  margin: 10px 0;
+}
+
+#club-cosecha .club-premios {
+  color: #fff5df;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 400;
+  margin: 10px auto 0;
+}
+
+/* BOTONES */
+
+#club-cosecha .club-acciones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+#club-cosecha .club-boton {
+  padding: 15px 25px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+#club-cosecha #unirme-club {
+  background: #f4dfb7;
+  color: #103c27;
+  border: 1px solid #c5a36b;
+}
+
+#club-cosecha #consultar-puntos {
+  background: transparent;
+  color: #f4dfb7;
+  border: 1px solid #c5a36b;
+}
+
+#club-cosecha .club-boton:hover {
+  transform: translateY(-3px);
+  background: #fff5df;
+  color: #103c27;
+}
+
+#club-cosecha .club-gratis {
+  color: #e9c58c;
+  opacity: 1;
+  font-size: 12px;
+  margin: 18px 0 0;
+}
+
+/* ==========================================
+   CLUB COSECHA - VERSION MOVIL
+   ========================================== */
+
+@media (max-width: 700px) {
+
+  .pagina-inicio #club-cosecha {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    margin: 25px auto;
+    padding: 32px 16px 25px;
+    border-radius: 25px;
+  }
+
+  #club-cosecha::before,
+  #club-cosecha::after {
+    width: 90px;
+    height: 100px;
+    top: -5px;
+    background-size: 180%;
+  }
+
+  #club-cosecha::before {
+    left: -12px;
+  }
+
+  #club-cosecha::after {
+    right: -12px;
+  }
+
+  #club-cosecha .eyebrow {
+    font-size: 10px;
+    padding: 8px 15px;
+    letter-spacing: 1.5px;
+  }
+
+  #club-cosecha h2 {
+    font-size: clamp(25px, 7.5vw, 32px);
+    margin-top: 22px;
+    line-height: 1.25;
+  }
+
+  #club-cosecha .club-intro {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  #club-cosecha .club-beneficios {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 22px 0;
+  }
+
+  #club-cosecha .club-beneficio {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 18px 30px 18px 12px;
+    gap: 12px;
+    border-radius: 17px;
+  }
+
+  #club-cosecha .club-icono {
+    width: 46px;
+    height: 46px;
+    font-size: 21px;
+  }
+
+  #club-cosecha .club-texto {
+    flex: 1;
+  }
+
+  #club-cosecha .club-texto strong {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  #club-cosecha .club-texto p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  #club-cosecha .club-numero {
+    font-size: 17px;
+    top: 8px;
+    right: 9px;
+  }
+
+  #club-cosecha .club-sorpresa {
+    padding: 15px 5px;
+    margin: 18px auto;
+  }
+
+  #club-cosecha .club-sorpresa h3 {
+    font-size: 23px;
+  }
+
+  #club-cosecha .club-premios {
+    font-size: 14px;
+  }
+
+  #club-cosecha .club-acciones {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #club-cosecha .club-boton {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 290px;
+    padding: 13px 12px;
+    font-size: 13px;
+  }
+
+}
+
+/* ==========================================
+   VISÍTANOS - CAFÉ & CO.SECHA
+   ========================================== */
+
+.pagina-inicio #contacto.visita-cosecha {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 48px);
+  max-width: 1350px;
+  margin: 40px auto;
+  padding: 55px 35px 35px;
+  text-align: center;
+  overflow: hidden;
+
+  background: radial-gradient(
+    ellipse at center,
+    #fffaf0,
+    #f5e7cd
+  );
+
+  border: 1px solid #dfc39b;
+  border-radius: 30px;
+  box-shadow: 0 12px 35px rgba(75,45,20,.08);
+}
+
+/* DECORACIÓN BOTÁNICA */
+
+#contacto.visita-cosecha::before,
+#contacto.visita-cosecha::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 160px;
+  height: 160px;
+  background: url("images/hojas-cafeto.png")
+    center / 180% no-repeat;
+  pointer-events: none;
+}
+
+#contacto.visita-cosecha::before {
+  left: -12px;
+  transform: rotate(110deg);
+}
+
+#contacto.visita-cosecha::after {
+  right: -12px;
+  transform: scaleX(-1) rotate(110deg);
+}
+
+#contacto.visita-cosecha > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ENCABEZADO */
+
+#contacto.visita-cosecha .eyebrow {
+  display: inline-block;
+  background: #f0dbb4;
+  color: #103c27;
+  border-radius: 30px;
+  padding: 9px 22px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+#contacto.visita-cosecha h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(34px, 4vw, 52px);
+  color: #103c27;
+  margin: 20px 0 5px;
+  line-height: 1.2;
+}
+
+#contacto .visita-subtitulo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 29px;
+  color: #95683c;
+  margin: 5px auto 15px;
+}
+
+#contacto .visita-linea {
+  width: 85px;
+  height: 2px;
+  background: #c5a36b;
+  margin: 20px auto 30px;
+}
+
+/* TARJETAS */
+
+#contacto.visita-cosecha .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+}
+
+#contacto .contact-grid > .visita-tarjeta {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  padding: 30px 18px;
+  background: #fffaf0;
+  border: 1px solid #dfc39b;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(75,45,20,.06);
+}
+
+/* ICONOS */
+
+#contacto .visita-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  background: #103c27;
+  color: #e9c58c;
+  border: 1px solid #c5a36b;
+  border-radius: 50%;
+}
+
+#contacto .visita-icono svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* TEXTOS */
+
+#contacto .visita-tarjeta h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #103c27;
+  font-size: 25px;
+  margin: 5px 0;
+  line-height: 1.25;
+}
+
+#contacto .visita-tarjeta p {
+  color: #634b38;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+#contacto .visita-horario {
+  display: block;
+  color: #103c27;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 27px;
+  margin: 5px 0;
+}
+
+#contacto .visita-cerrado {
+  color: #95683c;
+  font-size: 13px;
+  background: #f5e7cd;
+  padding: 7px 16px;
+  border-radius: 30px;
+}
+
+/* BOTÓN CÓMO LLEGAR */
+
+#contacto .visita-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #103c27;
+  color: #fff5df;
+  border: 1px solid #c5a36b;
+  border-radius: 30px;
+  padding: 12px 24px;
+  margin-top: 8px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#contacto .visita-boton:hover {
+  background: #24533a;
+}
+
+/* REDES SOCIALES */
+
+#contacto .visita-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+#contacto .visita-redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #103c27;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+#contacto .visita-redes svg {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+#contacto .visita-redes a:hover {
+  color: #95683c;
+}
+
+/* FRASE FINAL */
+
+#contacto .visita-despedida {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: #95683c;
+  margin: 30px auto 0;
+}
+
+/* ==========================================
+   VISÍTANOS - VERSIÓN MÓVIL
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  #contacto.visita-cosecha .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .pagina-inicio #contacto.visita-cosecha {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    padding: 32px 14px 28px;
+    margin: 25px auto;
+    border-radius: 25px;
+  }
+
+  #contacto.visita-cosecha::before,
+  #contacto.visita-cosecha::after {
+    width: 90px;
+    height: 100px;
+    top: -5px;
+  }
+
+  #contacto.visita-cosecha .eyebrow {
+    font-size: 10px;
+    padding: 8px 17px;
+  }
+
+  #contacto.visita-cosecha h2 {
+    font-size: 34px;
+    margin-top: 18px;
+  }
+
+  #contacto .visita-subtitulo {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  #contacto .visita-linea {
+    margin: 16px auto 22px;
+  }
+
+  #contacto.visita-cosecha .contact-grid {
+    gap: 14px;
+  }
+
+  #contacto .contact-grid > .visita-tarjeta {
+    padding: 22px 14px;
+    gap: 10px;
+    border-radius: 20px;
+  }
+
+  #contacto .visita-icono {
+    width: 48px;
+    height: 48px;
+  }
+
+  #contacto .visita-icono svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  #contacto .visita-tarjeta h3 {
+    font-size: 23px;
+  }
+
+  #contacto .visita-tarjeta p {
+    font-size: 14px;
+  }
+
+  #contacto .visita-horario {
+    font-size: 25px;
+  }
+
+  #contacto .visita-redes a {
+    font-size: 13px;
+  }
+
+  #contacto .visita-despedida {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 24px auto 0;
+  }
+
+}
+/* CORRECCIÓN TARJETA REDES SOCIALES */
+
+#contacto .visita-tarjeta .visita-redes {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 8px 0;
+  margin: 0;
+  min-height: 0;
+  height: auto;
+  width: 100%;
+  gap: 14px;
+}
+/* ==========================================
+   PIE DE PÁGINA CAFÉ & CO.SECHA
+   ========================================== */
+
+.pagina-inicio .footer-cosecha {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 48px);
+  max-width: 1350px;
+  margin: 40px auto 25px;
+  padding: 35px 25px 25px;
+  overflow: hidden;
+  text-align: center;
+
+  background: radial-gradient(
+    ellipse at top,
+    #204d36,
+    #103c27 60%,
+    #0c2d20
+  );
+
+  border: 1px solid #c5a36b;
+  border-radius: 30px;
+  color: #fff5df;
+  box-shadow: 0 12px 30px rgba(16,60,39,.12);
+}
+
+/* HOJAS DECORATIVAS */
+
+.footer-cosecha::before,
+.footer-cosecha::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  width: 170px;
+  height: 170px;
+  background: url("images/hojas-cafeto.png")
+    center / 180% no-repeat;
+  pointer-events: none;
+}
+
+.footer-cosecha::before {
+  left: -15px;
+  transform: rotate(110deg);
+}
+
+.footer-cosecha::after {
+  right: -15px;
+  transform: scaleX(-1) rotate(110deg);
+}
+
+.footer-cosecha > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* LOGO */
+
+.footer-cosecha .footer-logo {
+  display: block;
+  width: 280px;
+  max-width: 85%;
+  height: auto;
+  margin: 0 auto 15px;
+}
+
+/* FRASES */
+
+.footer-cosecha h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 600;
+  font-style: italic;
+  color: #e9c58c;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+
+.footer-cosecha .footer-frase {
+  color: #fff5df;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 10px 0 22px;
+}
+
+/* REDES SOCIALES */
+
+.footer-cosecha .footer-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 20px auto;
+}
+
+.footer-cosecha .footer-redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #c5a36b;
+  border-radius: 50%;
+  color: #e9c58c;
+  transition: .25s ease;
+}
+
+.footer-cosecha .footer-redes svg {
+  width: 22px;
+  height: 22px;
+}
+
+.footer-cosecha .footer-redes a:hover {
+  background: #e9c58c;
+  color: #103c27;
+  transform: translateY(-3px);
+}
+
+/* SEPARADOR */
+
+.footer-cosecha .footer-linea {
+  width: 85%;
+  max-width: 650px;
+  height: 1px;
+  background: rgba(197,163,107,.5);
+  margin: 25px auto;
+}
+
+/* ENLACES */
+
+.footer-cosecha .footer-enlaces {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 20px auto;
+}
+
+.footer-cosecha .footer-enlaces a {
+  color: #fff5df;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-cosecha .footer-enlaces a:hover {
+  color: #e9c58c;
+}
+
+/* DERECHOS Y DESPEDIDA */
+
+.footer-cosecha .footer-derechos {
+  display: block;
+  color: #e9c58c;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 20px auto 10px;
+}
+
+.footer-cosecha .footer-carino {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  color: #f4dfb7;
+  margin: 15px auto 0;
+}
+
+/* ==========================================
+   PIE DE PÁGINA - MÓVIL
+   ========================================== */
+
+@media (max-width: 700px) {
+
+  .pagina-inicio .footer-cosecha {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    margin: 25px auto 15px;
+    padding: 25px 15px 95px;
+    border-radius: 25px;
+  }
+
+  .footer-cosecha::before,
+  .footer-cosecha::after {
+    width: 95px;
+    height: 100px;
+    top: -5px;
+  }
+
+  .footer-cosecha .footer-logo {
+    width: 230px;
+  }
+
+  .footer-cosecha h3 {
+    font-size: 26px;
+  }
+
+  .footer-cosecha .footer-frase {
+    font-size: 13px;
+  }
+
+  .footer-cosecha .footer-enlaces {
+    gap: 15px;
+  }
+
+  .footer-cosecha .footer-enlaces a {
+    font-size: 12px;
+  }
+
+  .footer-cosecha .footer-carino {
+    font-size: 22px;
+  }
+
+}
